@@ -10,15 +10,8 @@ import L5 from '../../shares/images/layers/l5.png'
 import L6 from '../../shares/images/layers/l6.png'
 import LS from '../../shares/images/layers/l_sky.png'
 import LW from '../../shares/images/layers/l_water.png'
-// import BG from '../../shares/images/layers_png/bg.png'
 import React from 'react'
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax'
-import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
-import { useWindowSize } from '@/shares/hooks/useWindowSize'
 import Image from 'next/image'
-import classes from './styles.module.scss'
-import { parallaxData } from '@/components/parallax_illustration/data'
-
 export const ParallaxIllustration = () => {
 	const layers = [
 		{

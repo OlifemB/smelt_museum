@@ -1,7 +1,7 @@
 export const mainTheme = {
-    components: {
-        Layout: {
-            headerBg: '#FFF5',
-        },
-    },
+	components: {
+		Layout: {
+			headerBg: '#FFF5',
+		},
+	},
 }

@@ -1,8 +1,7 @@
-'use client';
-import {atom} from "recoil";
-
+'use client'
+import { atom } from 'recoil'
 
 export const navigationState = atom({
-    key: 'navigationState',
-    default: {current: '/'}
+	key: 'navigationState',
+	default: { current: '/' },
 })

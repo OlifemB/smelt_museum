@@ -22,7 +22,6 @@ export const Navigation = () => {
 		>
 			<nav className={'container mx-auto flex flex-row items-center justify-between gap-8 px-8 py-4 h-full'}>
 				<LogoMain className={state.isScrolled ? 'h-12' : 'h-24'} />
-
 				{/*<div className={'flex flex-row'}>*/}
 				{/*	{data.map(item => (*/}
 				{/*		<Link*/}
@@ -33,11 +32,9 @@ export const Navigation = () => {
 				{/*			}*/}
 				{/*			href={item.link}*/}
 				{/*		>*/}
-				{/*			{item.label}*/}
-				{/*		</Link>*/}
+				{/*			{item.label}*/}w{/*		</Link>*/}
 				{/*	))}*/}
 				{/*</div>*/}
-
 				<LogoTour className={state.isScrolled ? 'h-12' : 'h-24'} />
 			</nav>
 		</header>
