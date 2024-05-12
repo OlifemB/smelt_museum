@@ -1,0 +1,67 @@
+.parallax {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.l1l {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+}
+
+.l1r {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+}
+
+.l2l {
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  width: 37%;
+}
+
+.l2r {
+  position: absolute;
+  right: 0;
+  bottom: 0%;
+  width: 40%;
+}
+
+.l3l {
+  position: absolute;
+  left: 0;
+  bottom: 15%;
+  width: 40%;
+}
+
+.l3r {
+  position: absolute;
+  bottom: 10%;
+  width: 40%;
+  right: 0;
+}
+
+.l4{
+  position: absolute;
+  right: 0;
+  bottom: 28%;
+  width: 100%;
+}
+.l5{
+  position: absolute;
+  left: 0;
+  bottom: 38%;
+  width: 65%;
+}
+.l6{
+  position: absolute;
+  right: 0;
+  bottom: 40%;
+  width: 70%;
+}
