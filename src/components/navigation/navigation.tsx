@@ -1,16 +1,10 @@
 'use client'
 
 import React, { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
 import LogoMain from '@/shares/svgs/logo-main.svg'
 import LogoTour from '@/shares/svgs/logo-tour.svg'
-import { useRecoilState } from 'recoil'
-import { data } from '@/components/navigation/navigation.data'
-import { navigationState } from '@/components/navigation/navigation.store'
 
 export const Navigation = () => {
-	// const [state, setState] = useRecoilState(navigationState)
 	const [state, setState] = useState({ isScrolled: false })
 
 	return (

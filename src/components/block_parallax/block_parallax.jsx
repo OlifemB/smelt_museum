@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { layersFisherman, layersFooter, layersHeader, section1, section2 } from '@/components/block_parallax/data'
+import { layersFooter, layersHeader, section1, section2 } from '@/components/block_parallax/data'
 import Title from '@/shares/svgs/title.svg'
 import { Card } from '@/components/card/card'
 import Image from 'next/image'
@@ -59,12 +59,12 @@ export const BlockParallax = () => {
 				</div>
 			</ParallaxLayer>
 
-			{section1.map(fisherman => (
-				<ParallaxLayer speed={fisherman.speed} offset={fisherman.offset} sticky={fisherman.sticky}>
+			{section1.map(item => (
+				<ParallaxLayer speed={item.speed} offset={item.offset} sticky={item.sticky} key={item.id}>
 					<div className={classes}>
 						<div />
 						<Card className={'flex items-center justify-center'}>
-							<Image src={fisherman.src} alt={''} width={600} />
+							<Image src={item.src} alt={''} width={600} />
 						</Card>
 					</div>
 				</ParallaxLayer>
@@ -105,7 +105,7 @@ export const BlockParallax = () => {
 			</ParallaxLayer>
 
 			{section2.map(item => (
-				<ParallaxLayer speed={item.speed} offset={item.offset} sticky={item.sticky}>
+				<ParallaxLayer speed={item.speed} offset={item.offset} sticky={item.sticky} key={item.id}>
 					<div className={classes}>
 						<div />
 						<Card className={'flex items-center justify-center'}>

@@ -3,7 +3,7 @@ import { useSpring, animated, to } from '@react-spring/web'
 import { useGesture } from 'react-use-gesture'
 import styles from './styles.module.css'
 
-export const Card = ({ children, blockSize, className }) => {
+export const Card = ({ children, className }) => {
 	const domTarget = useRef(null)
 
 	const calcX = (y, ly) => -(y - ly - window.innerHeight / 2) / 20
@@ -50,7 +50,7 @@ export const Card = ({ children, blockSize, className }) => {
 		config: { mass: 5, tension: 350, friction: 40 },
 	}))
 
-	const [{ wheelY }, wheelApi] = useSpring(() => ({ wheelY: 0 }))
+	// const [{ wheelY }, wheelApi] = useSpring(() => ({ wheelY: 0 }))
 	return (
 		<div className={styles.container}>
 			<animated.div
