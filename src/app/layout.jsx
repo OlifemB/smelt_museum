@@ -4,7 +4,6 @@ import React from 'react'
 import { Navigation } from '@/components/navigation/navigation'
 import { ConfigProvider } from 'antd'
 import { mainTheme } from '@/shares/configs/theme'
-import '@/shares/declarations/svgr'
 import { Providers } from '@/app/providers'
 
 const inter = Inter({ subsets: ['latin'] })
