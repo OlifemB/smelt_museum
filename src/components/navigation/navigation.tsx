@@ -26,7 +26,6 @@ export const Navigation = () => {
 				{/*			}*/}
 				{/*			href={item.link}*/}
 				{/*		>*/}
-				{/*			{item.label}*/}w{/*		</Link>*/}
 				{/*	))}*/}
 				{/*</div>*/}
 				<LogoTour className={state.isScrolled ? 'h-12' : 'h-24'} />
