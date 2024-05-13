@@ -77,13 +77,13 @@ export const BlockParallax = () => {
 								case 'text':
 									return <div
 										key={'layer_' + layerIndex + '&dataIndex_' + dataIndex}
-										className={'drop-shadow-xl text-white p-8 text-xl sm:text-5xl font-semibold backdrop-blur-md ' + item.className}>
+										className={'drop-shadow-xl text-white p-8 text-2xl sm:text-5xl font-semibold backdrop-blur-md ' + item.className}>
 										{item.text}
 									</div>
 								case 'list':
 									return <div
 										key={'layer_' + layerIndex + '&dataIndex_' + dataIndex}
-										className={'flex flex-col drop-shadow-xl text-white p-8 text-xl sm:text-5xl font-semibold  backdrop-blur-md  ' + item.className}>
+										className={'flex flex-col drop-shadow-xl text-white p-8 text-2xl sm:text-5xl font-semibold  backdrop-blur-md  ' + item.className}>
 										{item.list.map((li, listIndex) => <div
 											key={'layer_' + layerIndex + '&dataIndex_' + dataIndex + '&listIndex_' + listIndex}>{li}</div>)}
 									</div>
