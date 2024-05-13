@@ -23,6 +23,11 @@
 /*  }*/
 /*}*/
 
+.bg{
+    background: linear-gradient(180deg, #92b3bc, #0d4479);
+    background-size: 100% 100%;
+    height: 100vh;
+}
 
 body {
     color: var(--secondary);
@@ -31,10 +36,9 @@ body {
     /*        transparent,*/
     /*        rgb(var(--background-end-rgb))*/
     /*) rgb(var(--background-start-rgb));*/
-    background: rgb(48,147,175);
-    background: linear-gradient(180deg, rgba(48,147,175,1) 0%, rgba(146,179,188,1) 100%);
     font-family: 'Roboto', serif;
     overflow-x: hidden;
+    height: 100%;
 }
 
 @layer utilities {
