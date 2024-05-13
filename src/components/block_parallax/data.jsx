@@ -5,7 +5,6 @@ import S2P1 from '@/shares/images/parallax/photo_2024-05-12_13-48-52.jpg'
 import S2P2 from '@/shares/images/parallax/photo_2024-05-12_13-15-15.jpg'
 import S2P3 from '@/shares/images/parallax/photo_2024-05-12_13-59-15.jpg'
 import S2P4 from '@/shares/images/parallax/photo_2024-05-12_13-15-19.jpg'
-import Image from 'next/image'
 import React from 'react'
 
 export const layersHeader = [

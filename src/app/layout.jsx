@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Navigation } from '@/components/navigation/navigation'
 import { ConfigProvider } from 'antd'
 import { mainTheme } from '@/shares/configs/theme'
@@ -16,13 +16,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<ConfigProvider theme={mainTheme}>
-			<html lang="ru">
-				<body className={inter.className}>
-					<Providers>
-						<Navigation />
-						{children}
-					</Providers>
-				</body>
+			<html lang='ru'>
+			<body className={inter.className}>
+			<Providers>
+
+				<Suspense fallback={<p>Loading feed...</p>}>
+					<Navigation />
+					{children}
+				</Suspense>
+			</Providers>
+			</body>
 			</html>
 		</ConfigProvider>
 	)

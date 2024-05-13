@@ -17,7 +17,6 @@ export const BlockParallax = () => {
 	const [current, setCurrent] = useState(0)
 
 	useEffect(() => {
-
 		console.log(parallax.current.offset)
 	}, [current])
 
@@ -66,6 +65,8 @@ export const BlockParallax = () => {
 							switch (item.type) {
 								case 'image':
 									return <Image
+										placeholder='blur'
+										priority={true}
 										key={'layer_' + layerIndex + '&dataIndex_' + dataIndex}
 										src={item.src}
 										width={item.width}
@@ -76,20 +77,20 @@ export const BlockParallax = () => {
 								case 'text':
 									return <div
 										key={'layer_' + layerIndex + '&dataIndex_' + dataIndex}
-										className={'border border-4 border-white bg-black/30  drop-shadow-lg text-white p-8 text-xl sm:text-3xl font-semibold backdrop-blur-lg ' + item.className}>
+										className={'drop-shadow-xl text-white p-8 text-xl sm:text-5xl font-semibold backdrop-blur-md ' + item.className}>
 										{item.text}
 									</div>
 								case 'list':
 									return <div
 										key={'layer_' + layerIndex + '&dataIndex_' + dataIndex}
-										className={'flex flex-col border border-4 border-white  drop-shadow-lg bg-black/30 text-white p-8 text-xl sm:text-3xl font-semibold backdrop-blur-lg ' + item.className}>
+										className={'flex flex-col drop-shadow-xl text-white p-8 text-xl sm:text-5xl font-semibold  backdrop-blur-md  ' + item.className}>
 										{item.list.map((li, listIndex) => <div
 											key={'layer_' + layerIndex + '&dataIndex_' + dataIndex + '&listIndex_' + listIndex}>{li}</div>)}
 									</div>
 							}
 						})
 					}
-				</ParallaxLayer>
+				</ParallaxLayer>,
 			)}
 
 
