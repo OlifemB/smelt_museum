@@ -24,6 +24,7 @@ module.exports = {
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'src/shares/styles')],
 	},
+	reactStrictMode: false,
 	// i18n: {
 	//     locales: ['en-US', 'fr', 'nl-NL', 'ru-RU'],
 	//     defaultLocale: 'en-US',

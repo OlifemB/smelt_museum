@@ -247,7 +247,7 @@ export const layers = [
 		data: [{
 			type: 'text',
 			text: 'В музее также представлена аутентичная лодка с парусом. С помощью видео инструкции вы самостоятельно можете установить парус и отправиться на лодке в виртуальное путешествие.',
-			className: 'w-[65%] translate-y-[140px] translate-x-[-80px] sm:w-[400px] sm:translate-y-[120px] sm:translate-x-[-280px]',
+			className: 'w-[65%] translate-y-[140px] translate-x-[-80px] sm:w-[600px] sm:translate-y-[120px] sm:translate-x-[-280px]',
 		}],
 	},
 	// -----------------------------------------------------------------------
@@ -258,7 +258,7 @@ export const layers = [
 			{
 				type: 'image',
 				src: S2P4,
-				className: 'w-[90%] translate-y-[-160px] sm:w-[70%] sm:-translate-x-[100px] sm:translate-y-[0rem]',
+				className: 'w-[90%] translate-y-[-160px] sm:w-[70%] sm:-translate-x-[100px] sm:translate-y-[-200px]',
 				width: 800,
 			},
 		],
