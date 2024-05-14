@@ -7,7 +7,7 @@ import Title from '@/shares/svgs/title.svg'
 import TitleMobile from '@/shares/svgs/title-mobile.svg'
 import Image from 'next/image'
 import { useWheel } from '@/shares/hooks/useWheel'
-import { useDragEvents, useSwipe, useSwipeEvents } from 'beautiful-react-hooks'
+import { useDebouncedCallback, useDragEvents, useSwipe, useSwipeEvents } from 'beautiful-react-hooks'
 import useTouch from 'beautiful-react-hooks/useTouch'
 
 const slides = 8
@@ -68,9 +68,7 @@ export const BlockParallax = () => {
 						justifyContent: 'center',
 					}}
 				>
-					<div
-						// onClick={() => handleChangeSlide(1)}
-					>
+					<div>
 						<div className={'hidden sm:block'}><Title /></div>
 						<div className={'sm:hidden block'}><TitleMobile /></div>
 					</div>
