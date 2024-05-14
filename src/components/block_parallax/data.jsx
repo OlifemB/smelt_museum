@@ -151,7 +151,7 @@ export const layers = [
 			{
 				type: 'image',
 				src: S1P2,
-				className: 'w-[95%] sm:w-[70%] sm:-translate-x-[40px] ',
+				className: 'w-[95%] translate-y-[-100px] sm:w-[70%] sm:-translate-x-[40px] ',
 				width: 800,
 			},
 		],
@@ -204,7 +204,7 @@ export const layers = [
 		data: [{
 			type: 'text',
 			text: 'Вы также сможете попасть в стаю корюшек и попытаться вместе с ними ускользнуть из рыбацких сетей и перехитрить рыбаков.',
-			className: 'w-[70%] -translate-x-[50px] translate-y-[200px] sm:w-[500px] sm:-translate-x-[200px] sm:translate-y-[200px] ',
+			className: 'w-[70%] translate-x-[-50px] translate-y-[180px] sm:w-[500px] sm:-translate-x-[200px] sm:translate-y-[200px] ',
 		}],
 	},
 	// -----------------------------------------------------------------------
@@ -247,7 +247,7 @@ export const layers = [
 		data: [{
 			type: 'text',
 			text: 'В музее также представлена аутентичная лодка с парусом. С помощью видео инструкции вы самостоятельно можете установить парус и отправиться на лодке в виртуальное путешествие.',
-			className: 'w-[60%] translate-y-[180px] translate-x-[-50px] sm:w-[400px] sm:translate-y-[120px] sm:translate-x-[-280px]',
+			className: 'w-[65%] translate-y-[140px] translate-x-[-80px] sm:w-[400px] sm:translate-y-[120px] sm:translate-x-[-280px]',
 		}],
 	},
 	// -----------------------------------------------------------------------
