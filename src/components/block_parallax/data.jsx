@@ -224,7 +224,7 @@ const layersFooter = [
 		data: [{
 			type: 'list',
 			list: ['Контакты:', '+7(800) 800-80-80', 'vk.com/myid'],
-			className: 'w-[95%] sm:translate-y-[-380px] sm:w-[600px] sm:translate-y-[-220px] ',
+			className: 'w-[95%] translate-y-[-220px] sm:translate-y-[-380px] sm:w-[600px]  ',
 		}],
 	}, {
 		offset: 8,
