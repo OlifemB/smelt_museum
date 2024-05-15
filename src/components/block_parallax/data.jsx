@@ -69,7 +69,7 @@ const layersBody = [
 		data: [{
 			type: 'text',
 			text: 'Добро пожаловать в единственный в мире интерактивный МУЗЕЙ КОРЮШКИ!',
-			className: 'w-[90%] translate-y-[180px] sm:w-[700px] sm:translate-y-[220px] sm:-translate-x-[200px]',
+			className: 'w-[90%] translate-y-[180px] sm:w-[700px] sm:translate-y-[220px] sm:translate-x-[-320px]',
 		}],
 	},
 	// -----------------------------------------------------------------------
@@ -187,7 +187,7 @@ const layersBody = [
 			{
 				type: 'image',
 				src: S2P4,
-				className: 'w-[90%] translate-y-[-160px] sm:w-[70%] sm:-translate-x-[100px] sm:translate-y-[-200px]',
+				className: 'w-[90%] translate-y-[-160px] sm:w-[70%] sm:-translate-x-[100px] sm:translate-y-[-160px]',
 				width: 800,
 			},
 		],
@@ -208,14 +208,14 @@ const layersFooter = [
 		speed: 0,
 		data: [{
 			type: 'block',
-			className: styles.lf_1 + ' translate-y-[-10px] md:translate-y-[100px]',
+			className: styles.lf_1 + ' translate-y-[-10px] md:translate-y-[170px]',
 		}],
 	}, {
-		offset: 8.05,
+		offset: 8,
 		speed: -0.02,
 		data: [{
 			type: 'block',
-			className: styles.lf_2 + ' translate-y-[-40px] md:translate-y-[60px]',
+			className: styles.lf_2 + ' translate-y-[-40px] md:translate-y-[180px]',
 		}],
 	},
 	{
@@ -227,11 +227,11 @@ const layersFooter = [
 			className: 'w-[95%] sm:translate-y-[-380px] sm:w-[600px] sm:translate-y-[-220px] ',
 		}],
 	}, {
-		offset: 8.05,
+		offset: 8,
 		speed: -0.1,
 		data: [{
 			type: 'block',
-			className: styles.lf_3 + ' translate-y-[-40px] md:translate-y-[40px]',
+			className: styles.lf_3 + ' translate-y-[-40px] md:translate-y-[180px]',
 		}],
 	}, {
 		offset: 8,
@@ -253,7 +253,7 @@ const layersFooter = [
 		speed: -0.3,
 		data: [{
 			type: 'block',
-			className: styles.lf_5 + '  translate-y-[-50px] md:translate-y-[60px]',
+			className: styles.lf_5 + '  translate-y-[-50px] md:translate-y-[120px]',
 		}],
 	},
 ].reverse()
