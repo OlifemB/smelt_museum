@@ -198,7 +198,7 @@ const layersBody = [
 		data: [{
 			type: 'text',
 			text: 'Вы узнаете о подводной жизни в реке Волхов, заглянув в Волшебную бочку. И, напоследок почувствуете себя художником - машинистом и создадите своё уникальное творческое произведение.',
-			className: 'w-[95%] translate-y-[160px] sm:translate-y-[360px] sm:translate-x-[200px] sm:w-[800px] ',
+			className: 'w-[95%] translate-y-[160px] sm:translate-y-[300px] sm:translate-x-[200px] sm:w-[800px] ',
 		}],
 	},
 ]
@@ -224,7 +224,7 @@ const layersFooter = [
 		data: [{
 			type: 'list',
 			list: ['Контакты:', '+7(800) 800-80-80', 'vk.com/myid'],
-			className: 'w-[95%] translate-y-[-220px]',
+			className: 'w-[95%] sm:translate-y-[-380px] sm:w-[600px] sm:translate-y-[-220px] ',
 		}],
 	}, {
 		offset: 8.05,
@@ -239,7 +239,7 @@ const layersFooter = [
 		data: [{
 			type: 'image',
 			src: Map,
-			className: ' w-[90%] sm:w-[600px] translate-y-[40px] rounded-md',
+			className: ' w-[90%] translate-y-[40px] sm:w-[600px] sm:translate-y-[40px] rounded-md',
 		}],
 	}, {
 		offset: 8,
