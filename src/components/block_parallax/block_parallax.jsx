@@ -7,8 +7,8 @@ import Title from '@/shares/svgs/title.svg'
 import TitleMobile from '@/shares/svgs/title-mobile.svg'
 import Image from 'next/image'
 import { useSwipeEvents } from 'beautiful-react-hooks'
-import { useWheel } from '@/shares/hooks/useWheel'
 import header from '@/components/block_parallax/styles.module.css'
+import { useWheel } from '@/shares/hooks/useWheel'
 
 const slides = 8
 

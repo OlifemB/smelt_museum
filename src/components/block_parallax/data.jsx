@@ -5,6 +5,7 @@ import S2P1 from '@/shares/images/photos/photo_2024-05-12_13-48-52.jpg'
 import S2P2 from '@/shares/images/photos/photo_2024-05-12_13-15-15.jpg'
 import S2P3 from '@/shares/images/photos/photo_2024-05-12_13-59-15.jpg'
 import S2P4 from '@/shares/images/photos/photo_2024-05-12_13-15-19.jpg'
+import Map from '@/shares/images/map.png'
 import styles from './styles.module.css'
 
 const layersHeader = [
@@ -214,14 +215,31 @@ const layersFooter = [
 		speed: -0.02,
 		data: [{
 			type: 'block',
-			className: styles.lf_2 + ' translate-y-[-80px] md:translate-y-[60px]',
+			className: styles.lf_2 + ' translate-y-[-40px] md:translate-y-[60px]',
+		}],
+	},
+	{
+		offset: 8,
+		speed: 0.5,
+		data: [{
+			type: 'list',
+			list: ['Контакты:', '+7(800) 800-80-80', 'vk.com/myid'],
+			className: 'w-[95%] translate-y-[-220px]',
 		}],
 	}, {
 		offset: 8.05,
 		speed: -0.1,
 		data: [{
 			type: 'block',
-			className: styles.lf_3 + ' translate-y-[-80px] md:translate-y-[40px]',
+			className: styles.lf_3 + ' translate-y-[-40px] md:translate-y-[40px]',
+		}],
+	}, {
+		offset: 8,
+		speed: 2,
+		data: [{
+			type: 'image',
+			src: Map,
+			className: ' w-[90%] sm:w-[600px] translate-y-[40px] rounded-md',
 		}],
 	}, {
 		offset: 8,
