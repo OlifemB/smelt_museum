@@ -5,6 +5,7 @@ import { Navigation } from '@/components/navigation/navigation'
 import { ConfigProvider } from 'antd'
 import { mainTheme } from '@/shares/configs/theme'
 import { Providers } from '@/app/providers'
+import { Spinner } from '@/components/spinner/spinner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
 			<body className={inter.className}>
 			<Providers>
 
-				<Suspense fallback={<p>Loading feed...</p>}>
+				<Suspense fallback={<Spinner/>}>
 					<Navigation />
 					{children}
 				</Suspense>

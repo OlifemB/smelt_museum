@@ -28,6 +28,11 @@
     height: 100vh;
 }
 
+html{
+
+    height: 100%;
+}
+
 body {
     color: var(--secondary);
     /*background: linear-gradient(*/
