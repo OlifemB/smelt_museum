@@ -2,13 +2,13 @@
 
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { layers, layersFooter, layersHeader, section1, section2 } from '@/components/block_parallax/data'
+import { layers } from '@/components/block_parallax/data'
 import Title from '@/shares/svgs/title.svg'
 import TitleMobile from '@/shares/svgs/title-mobile.svg'
 import Image from 'next/image'
+import { useSwipeEvents } from 'beautiful-react-hooks'
 import { useWheel } from '@/shares/hooks/useWheel'
-import { useDebouncedCallback, useDragEvents, useSwipe, useSwipeEvents } from 'beautiful-react-hooks'
-import useTouch from 'beautiful-react-hooks/useTouch'
+import header from '@/components/block_parallax/styles.module.css'
 
 const slides = 8
 
@@ -16,6 +16,8 @@ export const BlockParallax = () => {
 	const parallax = useRef(null)
 	const [current, setCurrent] = useState(0)
 	const wheel = useWheel()
+
+	console.log('wheel')
 
 	useEffect(() => {
 		handleSetCurrent(current, wheel.direction)
@@ -53,26 +55,6 @@ export const BlockParallax = () => {
 				// onTouchMove={handleTouchMove}
 				// onTouchEnd={handleTouchEnd}
 			>
-				{layersHeader.map((item, index) => (
-					<ParallaxLayer offset={item.offset} speed={item.speed} key={'parallaxLayer' + index}>
-						<div className={'animation_layer parallax ' + `${item.id}`} id={item.id} />
-					</ParallaxLayer>
-				))}
-
-				<ParallaxLayer
-					speed={1}
-					style={{
-						display: 'flex',
-						flexDirection: 'column',
-						alignItems: 'center',
-						justifyContent: 'center',
-					}}
-				>
-					<div>
-						<div className={'hidden sm:block'}><Title /></div>
-						<div className={'sm:hidden block'}><TitleMobile /></div>
-					</div>
-				</ParallaxLayer>
 
 				{layers.map((layer, layerIndex) =>
 					<ParallaxLayer
@@ -86,6 +68,9 @@ export const BlockParallax = () => {
 						{
 							layer.data.map((item, dataIndex) => {
 								switch (item.type) {
+									case 'block':
+										return <div
+											className={header.animation + ' ' + header.animation_layer + ' ' + item.className} />
 									case 'image':
 										return <Image
 											placeholder='blur'
@@ -117,16 +102,15 @@ export const BlockParallax = () => {
 				)}
 
 
-				{/* FOOTER ------------------------------------------- */}
-				<div
-					// onClick={() => handleClick(0)}
+				{/* HEADER ------------------------------------------- */}
+				<ParallaxLayer
+					speed={1}
+					className={'flex flex-col items-center justify-center text-center'}
 				>
-					{layersFooter.map((item, index) => (
-						<ParallaxLayer offset={item.offset} speed={item.speed} key={'parallaxLayerFooter' + index}>
-							<div className={'animation_layer parallax ' + item.id} id={item.id} />
-						</ParallaxLayer>
-					))}
-				</div>
+					<Title className={'hidden sm:block'} />
+					<TitleMobile className={'w-[90%] sm:hidden block'} />
+				</ParallaxLayer>
+
 
 				<ParallaxLayer offset={9}>
 					<div className={'bg-[#012840] flex flex-col flex-1 h-full '} id={'footer'}>

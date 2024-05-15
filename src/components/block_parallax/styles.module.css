@@ -18,42 +18,50 @@
   position: fixed;
 }
 
-.lf-1{
-  bottom: -0px;
+.lh_1 {
+  background-image: url(../../shares/images/header/l1.png);
 }
 
-.lf-2{
-  bottom: -0px;
+.lh_2 {
+  background-image: url(../../shares/images/header/l2.png);
 }
 
-.lf-3{
-  bottom: 0px;
+.lh_3 {
+  background-image: url(../../shares/images/header/l3.png);
 }
 
-.lf-4{
-  bottom: 0px;
+.lh_4 {
+  background-image: url(../../shares/images/header/l4.png);
 }
 
-.lf-5{
-  bottom: 0px;
+.lh_5 {
+  background-image: url(../../shares/images/header/l5.png);
 }
 
-#lf-1 {
+.lh_sky {
+  background-image: url(../../shares/images/header/l_sky.png);
+}
+
+.lh_water {
+  background-image: url(../../shares/images/header/l_water.png);
+}
+
+.lf_1 {
   background-image: url(../../shares/images/footer/l1.png);
 }
 
-#lf-2 {
+.lf_2 {
   background-image: url(../../shares/images/footer/l2.png);
 }
 
-#lf-3 {
+.lf_3 {
   background-image: url(../../shares/images/footer/l3.png);
 }
 
-#lf-4 {
+.lf_4 {
   background-image: url(../../shares/images/footer/l4.png);
 }
 
-#lf-5 {
+.lf_5 {
   background-image: url(../../shares/images/footer/l6.png);
 }

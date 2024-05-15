@@ -3,10 +3,16 @@
 import React, { useState, Suspense } from 'react'
 import LogoMain from '@/shares/svgs/logo-main.svg'
 import LogoTour from '@/shares/svgs/logo-tour.svg'
+import { useWindowScroll } from 'beautiful-react-hooks'
 
 
 export const Navigation = () => {
-	const [state, setState] = useState({ isScrolled: false })
+	const [scrollY, setScrollY] = useState(0);
+	const onWindowScroll = useWindowScroll();
+	
+	onWindowScroll((event) => {
+		setScrollY(window.scrollY);
+	});
 	
 	return (
 		<header
@@ -15,9 +21,9 @@ export const Navigation = () => {
 			}
 		>
 			<nav className={'container mx-auto flex flex-row items-center justify-between gap-8 px-8 py-4 h-full'}>
-				<LogoMain className={state.isScrolled ? 'h-12' : 'h-20'} />
+				<LogoMain className={scrollY ? 'h-16' : 'h-16 md-24'} />
 				
-				<LogoTour className={state.isScrolled ? 'h-12' : 'h-24'} />
+				<LogoTour className={scrollY  ? 'h-16' : 'h-16 md-24'} />
 				{/*<div className={'flex flex-row'}>*/}
 				{/*	{data.map(item => (*/}
 				{/*		<Link*/}

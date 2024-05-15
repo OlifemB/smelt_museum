@@ -5,6 +5,7 @@ export const useWheel = () => {
 
 	useEffect(() => {
 		const handler = (e) => {
+			console.log(e)
 			setState(prevState => ({
 				direction: e.deltaY > prevState.direction ? 1 : -1,
 				}),

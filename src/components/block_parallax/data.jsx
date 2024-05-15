@@ -1,129 +1,57 @@
-import S1P1 from '@/shares/images/parallax/photo_2024-05-12_13-15-12.jpg'
-import S1P2 from '@/shares/images/parallax/photo_2024-05-12_13-15-13.jpg'
-import S1P3 from '@/shares/images/parallax/photo_2024-05-12_13-15-14.jpg'
-import S2P1 from '@/shares/images/parallax/photo_2024-05-12_13-48-52.jpg'
-import S2P2 from '@/shares/images/parallax/photo_2024-05-12_13-15-15.jpg'
-import S2P3 from '@/shares/images/parallax/photo_2024-05-12_13-59-15.jpg'
-import S2P4 from '@/shares/images/parallax/photo_2024-05-12_13-15-19.jpg'
-import React from 'react'
+import S1P1 from '@/shares/images/photos/photo_2024-05-12_13-15-12.jpg'
+import S1P2 from '@/shares/images/photos/photo_2024-05-12_13-15-13.jpg'
+import S1P3 from '@/shares/images/photos/photo_2024-05-12_13-15-14.jpg'
+import S2P1 from '@/shares/images/photos/photo_2024-05-12_13-48-52.jpg'
+import S2P2 from '@/shares/images/photos/photo_2024-05-12_13-15-15.jpg'
+import S2P3 from '@/shares/images/photos/photo_2024-05-12_13-59-15.jpg'
+import S2P4 from '@/shares/images/photos/photo_2024-05-12_13-15-19.jpg'
+import styles from './styles.module.css'
 
-export const layersHeader = [
+const layersHeader = [
 	{
-		id: 'lh-1',
 		offset: 0,
 		speed: 0.1,
-	},
-	{
-		id: 'lh-2',
+		data: [{
+			type: 'block',
+			className: styles.lh_1 + ' translate-y-[100px] sm:translate-y-[300px]',
+		}],
+	}, {
 		offset: 0,
 		speed: 0.0,
-	},
-	{
-		id: 'lh-3',
+		data: [{
+			type: 'block',
+			className: styles.lh_2 + ' sm:translate-y-[200px]',
+		}],
+	}, {
 		offset: 0,
 		speed: -0.1,
-	},
-	{
-		id: 'lh-4',
+		data: [{
+			type: 'block',
+			className: styles.lh_3 + ' translate-y-[30px] sm:translate-y-[60px]',
+		}],
+	}, {
 		offset: 0,
 		speed: -0.15,
-	},
-	{
-		id: 'lh-5',
+		data: [{
+			type: 'block',
+			className: styles.lh_4 + ' translate-y-[-100px] sm:translate-y-[-100px]',
+		}],
+	}, {
 		offset: 0,
 		speed: -0.2,
-	},
-	{
-		id: 'lh-sky',
+		data: [{
+			type: 'block',
+			className: styles.lh_5 + ' translate-y-[-140px] sm:translate-y-[-180px]',
+		}],
+	}, {
 		offset: 0,
 		speed: -0.5,
-	},
-].reverse()
-
-export const layersFooter = [
-	{
-		id: 'lf-1',
-		offset: 8,
-		speed: 0,
-	},
-	{
-		id: 'lf-2',
-		offset: 8.05,
-		speed: 0.02,
-	},
-	{
-		id: 'lf-3',
-		offset: 8.05,
-		speed: 0.03,
-	},
-	{
-		id: 'lf-4',
-		offset: 8,
-		speed: 0.04,
-	},
-	{
-		id: 'lf-5',
-		offset: 8,
-		speed: 0.08,
-	},
-].reverse()
-
-export const section1 = [
-	{
-		src: S1P1,
-		id: 'S1P1',
-		offset: 6,
-		speed: 0,
-		sticky: { start: 1, end: 1.5 },
-	},
-	{
-		src: S1P2,
-		id: 'S1P2',
-		offset: 6,
-		speed: 0,
-		sticky: { start: 2, end: 2.5 },
-	},
-	{
-		src: S1P3,
-		id: 'S1P3',
-		offset: 6,
-		speed: 0,
-		sticky: { start: 3, end: 3.5 },
-	},
-]
-
-export const section2 = [
-	{
-		src: S2P1,
-		id: 'S2P1',
-		offset: 6,
-		speed: 0,
-		sticky: { start: 4.4, end: 5 },
-	},
-	{
-		src: S2P2,
-		id: 'S2P2',
-		offset: 6,
-		speed: 0,
-		sticky: { start: 5.5, end: 6 },
-	},
-	{
-		src: S2P3,
-		id: 'S2P3',
-		offset: 6,
-		speed: 0,
-		sticky: { start: 6.5, end: 7 },
-	},
-	{
-		src: S2P4,
-		id: 'S2P4,',
-		offset: 6,
-		speed: 0,
-		sticky: { start: 7.5, end: 8 },
-	},
-]
-
-export const layers = [
+		data: [{
+			type: 'block',
+			className: styles.lh_sky + ' ',
+		}],
+	}].reverse()
+const layersBody = [
 	{
 		offset: 1,
 		speed: 0.7,
@@ -247,7 +175,7 @@ export const layers = [
 		data: [{
 			type: 'text',
 			text: 'В музее также представлена аутентичная лодка с парусом. С помощью видео инструкции вы самостоятельно можете установить парус и отправиться на лодке в виртуальное путешествие.',
-			className: 'w-[65%] translate-y-[140px] translate-x-[-80px] sm:w-[600px] sm:translate-y-[120px] sm:translate-x-[-280px]',
+			className: 'w-[65%] translate-y-[100px] translate-x-[-80px] sm:w-[600px] sm:translate-y-[120px] sm:translate-x-[-280px]',
 		}],
 	},
 	// -----------------------------------------------------------------------
@@ -272,4 +200,48 @@ export const layers = [
 			className: 'w-[95%] translate-y-[160px] sm:translate-y-[360px] sm:translate-x-[200px] sm:w-[800px] ',
 		}],
 	},
+]
+const layersFooter = [
+	{
+		offset: 8,
+		speed: 0,
+		data: [{
+			type: 'block',
+			className: styles.lf_1 + ' translate-y-[-10px] md:translate-y-[100px]',
+		}],
+	}, {
+		offset: 8.05,
+		speed: -0.02,
+		data: [{
+			type: 'block',
+			className: styles.lf_2 + ' translate-y-[-80px] md:translate-y-[60px]',
+		}],
+	}, {
+		offset: 8.05,
+		speed: -0.1,
+		data: [{
+			type: 'block',
+			className: styles.lf_3 + ' translate-y-[-80px] md:translate-y-[40px]',
+		}],
+	}, {
+		offset: 8,
+		speed: -0.2,
+		data: [{
+			type: 'block',
+			className: styles.lf_4 + '  translate-y-[10px] md:translate-y-[100px]',
+		}],
+	}, {
+		offset: 8,
+		speed: -0.3,
+		data: [{
+			type: 'block',
+			className: styles.lf_5 + '  translate-y-[-50px] md:translate-y-[60px]',
+		}],
+	},
+].reverse()
+
+export const layers = [
+	...layersHeader,
+	...layersBody,
+	...layersFooter,
 ]

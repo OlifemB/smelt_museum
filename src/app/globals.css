@@ -1,6 +1,5 @@
 @import "@/shares/styles/antf-fx.css";
-@import "@/components/block_parallax/header";
-@import "@/components/block_parallax/footer";
+@import "@/components/block_parallax/styles.module";
 
 @tailwind base;
 @tailwind components;
