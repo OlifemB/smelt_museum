@@ -6,8 +6,15 @@ import { layers } from '@/components/block_parallax/data'
 import Title from '@/shares/svgs/title.svg'
 import TitleMobile from '@/shares/svgs/title-mobile.svg'
 import Image from 'next/image'
-import { useSwipeEvents } from 'beautiful-react-hooks'
-import header from '@/components/block_parallax/styles.module.css'
+import {
+	useDebouncedCallback,
+	useEvent,
+	useGlobalEvent,
+	useSwipeEvents,
+	useThrottledCallback,
+} from 'beautiful-react-hooks'
+import { BlockParallaxItem } from '@/components/block_parallax/block_parallax_item'
+import { wheelEventInitialState } from '@/shares/configs/eventInitialStates'
 import { useWheel } from '@/shares/hooks/useWheel'
 
 const slides = 8
@@ -15,16 +22,13 @@ const slides = 8
 export const BlockParallax = () => {
 	const parallax = useRef(null)
 	const [current, setCurrent] = useState(0)
-	const wheel = useWheel()
-
-	console.log('wheel')
-
-	useEffect(() => {
-		handleSetCurrent(current, wheel.direction)
-	}, [wheel])
-
-
 	const ref = useRef(null)
+
+	const onWheel = useGlobalEvent('wheel')
+	const [lastWheelInfo, setLastWheelInfo] = useState(wheelEventInitialState)
+	const [allowWheel, setAllowWheel] = useState(true)
+
+
 	const { onSwipeEnd, onSwipeMove } = useSwipeEvents(ref)
 	const [lastSwipeInfo, setLastSwipeInfo] = useState()
 
@@ -34,8 +38,30 @@ export const BlockParallax = () => {
 		handleSetCurrent(current, e.direction === 'up' ? 1 : -1)
 	})
 
+	const onWheelHandler = e => {
+		setLastWheelInfo({ ...lastWheelInfo, deltaY: e.deltaY })
+		handleSetCurrent(current, e.deltaY > 0 ? 1 : -1)
+		setAllowWheel(false)
+		useDebouncedCallback(() => setAllowWheel(true))
+
+
+	}
+
+	// onWheel((e) =>
+	// 	allowWheel && onWheelHandler(e),
+	// )
+
+	const wheel = useWheel()
+
+	console.log('wheel')
+
+	useEffect(() => {
+		handleSetCurrent(current, wheel.direction)
+	}, [wheel])
+
 
 	const handleSetCurrent = (currentValue, direction) => {
+		console.log(currentValue, direction)
 		const newVal = (currentValue > 0 && currentValue < slides)
 		|| (currentValue === 0 && direction > 0)
 		|| (currentValue === 8 && direction < 0)
@@ -51,67 +77,38 @@ export const BlockParallax = () => {
 				pages={10}
 				ref={parallax}
 				className='animation bg h-screen !overflow-hidden'
-				// onTouchStart={handleTouchStart}
-				// onTouchMove={handleTouchMove}
-				// onTouchEnd={handleTouchEnd}
 			>
-
+				{/* BODY ------------------------------------------- */}
 				{layers.map((layer, layerIndex) =>
 					<ParallaxLayer
-						key={'layer_' + layerIndex}
 						offset={layer.offset}
 						speed={layer.speed}
+						key={'parallaxLayer' + layerIndex}
 						// onClick={() => handleChangeSlide(layer.offset + 1)}
 						// onScroll={handleScroll}
 						style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
 					>
 						{
-							layer.data.map((item, dataIndex) => {
-								switch (item.type) {
-									case 'block':
-										return <div
-											className={header.animation + ' ' + header.animation_layer + ' ' + item.className} />
-									case 'image':
-										return <Image
-											placeholder='blur'
-											priority={true}
-											key={'layer_' + layerIndex + '&dataIndex_' + dataIndex}
-											src={item.src}
-											width={item.width}
-											alt={''}
-											className={item.className}
-											// Make the image display full width
-										/>
-									case 'text':
-										return <div
-											key={'layer_' + layerIndex + '&dataIndex_' + dataIndex}
-											className={'drop-shadow-xl text-white p-8 text-2xl sm:text-5xl font-semibold backdrop-blur-md ' + item.className}>
-											{item.text}
-										</div>
-									case 'list':
-										return <div
-											key={'layer_' + layerIndex + '&dataIndex_' + dataIndex}
-											className={'flex flex-col drop-shadow-xl text-white p-8 text-2xl sm:text-5xl font-semibold  backdrop-blur-md  ' + item.className}>
-											{item.list.map((li, listIndex) => <div
-												key={'layer_' + layerIndex + '&dataIndex_' + dataIndex + '&listIndex_' + listIndex}>{li}</div>)}
-										</div>
-								}
-							})
+							layer.data.map((item, dataIndex) =>
+								<BlockParallaxItem
+									item={item}
+									key={'layer_' + layerIndex + '&dataIndex_' + dataIndex}
+								/>,
+							)
 						}
 					</ParallaxLayer>,
 				)}
 
-
-				{/* HEADER ------------------------------------------- */}
+				{/* TITLE ------------------------------------------- */}
 				<ParallaxLayer
 					speed={1}
 					className={'flex flex-col items-center justify-center text-center'}
 				>
-					<Title className={'hidden sm:block'} />
-					<TitleMobile className={'w-[90%] sm:hidden block'} />
+					<Title className={'hidden lg:block'} />
+					<TitleMobile className={'w-[90%] lg:hidden block'} />
 				</ParallaxLayer>
 
-
+				{/* FOOTER  ------------------------------------------- */}
 				<ParallaxLayer offset={9}>
 					<div className={'bg-[#012840] flex flex-col flex-1 h-full '} id={'footer'}>
 						FOOTER
@@ -121,3 +118,6 @@ export const BlockParallax = () => {
 		</div>
 	)
 }
+
+
+
