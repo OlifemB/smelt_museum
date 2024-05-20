@@ -70,7 +70,7 @@ const layersBody = [
 		data: [{
 			type: 'text',
 			text: 'Добро пожаловать в единственный в мире интерактивный МУЗЕЙ КОРЮШКИ!',
-			className: 'translate-y-[180px] lg:w-[700px] lg:translate-y-[220px] lg:translate-x-[-320px]',
+			className: 'translate-y-[180px] lg:translate-y-[220px] lg:w-[700px] lg:translate-y-[220px] lg:translate-x-[-120px]',
 		}],
 	},
 	// -----------------------------------------------------------------------
@@ -113,7 +113,7 @@ const layersBody = [
 		data: [{
 			type: 'text',
 			text: 'В пространстве музея вас встретят уникальные экспонаты, с которыми вы можете взаимодействовать. В этом вам помогут аудиогид и видео подсказки.',
-			className: 'w-[90%] translate-y-[200px] translate-x-[10px] lg:w-[800px] lg:translate-y-[240px] lg:-translate-x-[200px]',
+			className: 'w-[90%] translate-y-[200px] translate-x-[10px] lg:w-[800px] lg:translate-y-[240px] lg:-translate-x-[100px]',
 		}],
 	},
 
@@ -145,7 +145,7 @@ const layersBody = [
 			{
 				type: 'image',
 				src: S2P2,
-				className: 'w-[100%] -translate-y-[100px] translate-x-[-50px] lg:w-[70%] lg:-translate-x-[100px] lg:translate-y-[0rem]',
+				className: 'w-[100%] -translate-y-[100px] translate-x-[-50px] lg:w-[70%] lg:-translate-x-[300px] lg:translate-y-[0rem]',
 				width: 800,
 			},
 		],
@@ -156,7 +156,7 @@ const layersBody = [
 		data: [{
 			type: 'text',
 			text: 'Потом вы посмотрите видео об одежде рыбаков с древних времён и до настоящего времени. Сможете сами составить из разных элементов новый костюм рыбака и примерить на себя рыбацкий комбинезон и огромные сапоги.',
-			className: 'w-[95%] translate-x-[5px] translate-y-[200px] lg:w-[800px] lg:translate-y-[300px] lg:translate-x-[200px]  ',
+			className: 'w-[95%] translate-x-[5px] translate-y-[200px] lg:w-[600px] lg:translate-y-[200px] lg:translate-x-[200px]  ',
 		}],
 	},
 
@@ -168,7 +168,7 @@ const layersBody = [
 			type: 'image',
 			src: S2P3,
 			width: 800,
-			className: 'w-[120%] translate-y-[-50px] translate-x-[140px] lg:w-[50%] lg:translate-y-[40px] lg:translate-x-[200px]',
+			className: 'w-[80%] translate-y-[-50px] translate-x-[140px] lg:w-[50%] lg:translate-y-[40px] lg:translate-x-[200px]',
 		}],
 	},
 	{
@@ -177,7 +177,7 @@ const layersBody = [
 		data: [{
 			type: 'text',
 			text: 'В музее также представлена аутентичная лодка с парусом. С помощью видео инструкции вы самостоятельно можете установить парус и отправиться на лодке в виртуальное путешествие.',
-			className: 'w-[65%] translate-y-[100px] translate-x-[-80px] lg:w-[600px] lg:translate-y-[120px] lg:translate-x-[-280px]',
+			className: 'w-[65%] translate-y-[100px] translate-x-[-80px] lg:w-[560px] lg:translate-y-[120px] lg:translate-x-[-200px]',
 		}],
 	},
 	// -----------------------------------------------------------------------
@@ -199,7 +199,7 @@ const layersBody = [
 		data: [{
 			type: 'text',
 			text: 'Вы узнаете о подводной жизни в реке Волхов, заглянув в Волшебную бочку. И, напоследок почувствуете себя художником - машинистом и создадите своё уникальное творческое произведение.',
-			className: 'w-[95%] translate-y-[160px] lg:translate-y-[300px] lg:translate-x-[200px] lg:w-[800px] ',
+			className: 'w-[95%] translate-y-[160px] lg:translate-y-[200px] lg:translate-x-[240px] lg:w-[640px] ',
 		}],
 	},
 ]
@@ -209,14 +209,14 @@ const layersFooter = [
 		speed: 0,
 		data: [{
 			type: 'block',
-			className: styles.lf_1 + ' translate-y-[-10px] lg:translate-y-[170px]',
+			className: styles.lf_1 + ' translate-y-[35px] lg:translate-y-[170px]',
 		}],
 	}, {
 		offset: 8,
 		speed: -0.02,
 		data: [{
 			type: 'block',
-			className: styles.lf_2 + ' translate-y-[-20px] lg:translate-y-[180px]',
+			className: styles.lf_2 + ' translate-y-[40px] lg:translate-y-[180px]',
 		}],
 	},
 	{
@@ -232,7 +232,7 @@ const layersFooter = [
 		speed: -0.1,
 		data: [{
 			type: 'block',
-			className: styles.lf_3 + ' translate-y-[-40px] lg:translate-y-[180px]',
+			className: styles.lf_3 + ' translate-y-[0px] lg:translate-y-[180px]',
 		}],
 	}, {
 		offset: 8,
