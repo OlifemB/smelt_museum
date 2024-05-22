@@ -1,0 +1,42 @@
+version: '3'
+services:
+  nginx:
+    build: ./nginx
+    image: umputun/nginx-le:latest
+    hostname: nginx
+    container_name: nginx
+
+    depends_on:
+      - app
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+    volumes:
+      - ./nginx/ssl:/etc/nginx/ssl
+      - ./nginx/service.conf:/etc/nginx/service.conf
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    environment:
+      - TZ=Europe/Moscow
+      - LETSENCRYPT=true
+      - LE_EMAIL=9221932@mail.ru
+      - LE_FQDN=baltint.group
+
+    restart: always
+
+  app:
+    build: ./
+    environment:
+      - TZ=Europe/Moscow
+    ports:
+      - "3000:3000"
+    # volumes:
+    #   - /home/www:/
+    restart: always
