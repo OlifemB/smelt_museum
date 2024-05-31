@@ -1,6 +1,10 @@
 const path = require('path')
 
 module.exports = {
+	output: 'export',
+	images: {
+		formats: ['image/webp'],
+	},
 	webpack(config) {
 		const fileLoaderRule = config.module.rules.find(rule => rule.test?.test?.('.svg'))
 

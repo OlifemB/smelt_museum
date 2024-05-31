@@ -7,9 +7,9 @@ export const BlockParallaxItem = ({ item }) => {
 		<div className={header.animation + ' ' + header.animation_layer + ' ' + item.className} />
 
 	const ItemImage = ({ item }) =>
-		<Image
-			placeholder='blur'
-			priority={true}
+		<img
+			// placeholder='blur'
+			// priority={true}
 			src={item.src}
 			width={item.width}
 			alt={''}
@@ -34,10 +34,10 @@ export const BlockParallaxItem = ({ item }) => {
 			return <div
 				className={header.animation + ' ' + header.animation_layer + ' ' + item.className} />
 		case 'image':
-			return <Image
-				placeholder='blur'
-				priority={true}
-				src={item.src}
+			return <img
+				// placeholder='blur'
+				// priority={true}
+				src={item.src.src}
 				width={item.width}
 				alt={''}
 				className={item.className}
