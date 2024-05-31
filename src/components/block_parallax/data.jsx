@@ -8,7 +8,7 @@ import S2P4 from '@/shares/images/photos/p7.jpg'
 import Map from '@/shares/images/map.png'
 import styles from './styles.module.css'
 
-const layersHeader = [
+export const layersHeader = [
 	{
 		offset: 0,
 		speed: 0.1,
@@ -53,7 +53,7 @@ const layersHeader = [
 		}],
 	}].reverse()
 
-const layersBody = [
+export const layersBody = [
 	{
 		offset: 1,
 		speed: 0.7,
@@ -61,7 +61,7 @@ const layersBody = [
 			type: 'image',
 			src: S1P1,
 			width: 800,
-			className: 'w-[90%] -translate-y-[40px] lg:w-[80%] lg:translate-x-[40px]',
+			className: 'w-[1200px] -translate-y-[40px] lg:w-[80%] lg:translate-x-[40px]',
 		}],
 	},
 	{
@@ -70,7 +70,7 @@ const layersBody = [
 		data: [{
 			type: 'text',
 			text: 'Добро пожаловать в единственный в мире интерактивный МУЗЕЙ КОРЮШКИ!',
-			className: 'translate-y-[180px] lg:translate-y-[220px] lg:w-[700px] lg:translate-y-[220px] lg:translate-x-[-120px]',
+			className: 'lg:w-[700px] translate-y-[180px] lg:translate-y-[220px]  lg:translate-y-[220px] lg:translate-x-[220px] ',
 		}],
 	},
 	// -----------------------------------------------------------------------
@@ -91,7 +91,7 @@ const layersBody = [
 		speed: 1.5,
 		data: [{
 			type: 'list',
-			list: ['В Музее вы узнаете:', '* о родственниках корюшки', '* О её друзьях и недругах', '* О том, что она любит и чему радуется.'],
+			list: ['В Музее вы узнаете:', '- О родственниках корюшки', '- О её друзьях и недругах', '- О том, что она любит и чему радуется.'],
 			className: 'w-[300px] w-[95%] translate-y-[200px] lg:translate-y-[280px] lg:translate-x-[220px] lg:w-[700px] ',
 		}],
 	},
@@ -203,7 +203,7 @@ const layersBody = [
 		}],
 	},
 ]
-const layersFooter = [
+export const layersFooter = [
 	{
 		offset: 8,
 		speed: 0,
@@ -259,7 +259,7 @@ const layersFooter = [
 	},
 ].reverse()
 
-export const layers = [
+export const layersData = [
 	...layersHeader,
 	...layersBody,
 	...layersFooter,

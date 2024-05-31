@@ -20,24 +20,6 @@ export const Card = ({ children, className }) => {
 		}
 	}, [])
 
-	useGesture(
-		{
-			// onPinch: ({ offset: [d, a] }) => api({ zoom: d / 200, rotateZ: a }),
-			onMove: ({ xy: [px, py], dragging }) =>
-				!dragging &&
-				api({
-					rotateX: calcX(py, y.get()),
-					rotateY: calcY(px, x.get()),
-					scale: 1.1,
-				}),
-			onHover: ({ hovering }) => !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),
-			// onWheel: ({ event, offset: [, y] }) => {
-			// 	event.preventDefault()
-			// 	wheelApi.set({ wheelY: y })
-			// },
-		},
-		{ domTarget, eventOptions: { passive: false } },
-	)
 
 	const [{ x, y, rotateX, rotateY, rotateZ, zoom, scale }, api] = useSpring(() => ({
 		rotateX: 0,

@@ -5,7 +5,6 @@
 .animation {
   display: block;
   position: relative;
-  z-index: 10;
 }
 
 .animation_layer {

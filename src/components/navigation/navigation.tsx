@@ -3,16 +3,10 @@
 import React, { useState, Suspense } from 'react'
 import LogoMain from '@/shares/svgs/logo-main.svg'
 import LogoTour from '@/shares/svgs/logo-tour.svg'
-import { useWindowScroll } from 'beautiful-react-hooks'
 
 
 export const Navigation = () => {
 	const [scrollY, setScrollY] = useState(0);
-	const onWindowScroll = useWindowScroll();
-	
-	onWindowScroll((event) => {
-		setScrollY(window.scrollY);
-	});
 	
 	return (
 		<header

@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import './globals.css'
+import '../shares/styles/globals.css'
 import React, { Suspense } from 'react'
 import { Navigation } from '@/components/navigation/navigation'
 import { ConfigProvider } from 'antd'
@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
 			<html lang='ru'>
 			<body className={inter.className}>
 			<Providers>
-
 				<Suspense fallback={<Spinner/>}>
 					<Navigation />
 					{children}

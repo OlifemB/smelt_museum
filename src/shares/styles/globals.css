@@ -1,4 +1,3 @@
-@import "@/shares/styles/antf-fx.css";
 @import "@/components/block_parallax/styles.module";
 
 @tailwind base;
@@ -22,18 +21,27 @@
 /*  }*/
 /*}*/
 
+img{
+    overflow-clip-margin: unset !important;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
 .bg{
-    background: linear-gradient(180deg, #7aaee7, #052546);
-    background-size: 100% 100%;
-    height: 100vh;
+    background: linear-gradient(180deg, #7aaee7 0%, #6ea2dc 10%, #052546 100%);
+    background-size:contain;
+    height: 100%;
 }
 
 html{
-
+    margin: 0;
+    padding: 0;
     height: 100%;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     color: var(--secondary);
     /*background: linear-gradient(*/
     /*        to bottom,*/
