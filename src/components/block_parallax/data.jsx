@@ -224,7 +224,7 @@ export const layersFooter = [
 		speed: 0.5,
 		data: [{
 			type: 'list',
-			list: ['Контакты:', '+7(800) 800-80-80', 'vk.com/myid'],
+			list: ['Контакты:', '+7 963 325-23-55', 'vk.com/museumkorushki'],
 			className: 'w-[95%] translate-y-[-220px] lg:translate-y-[-380px] lg:w-[600px]  ',
 		}],
 	}, {

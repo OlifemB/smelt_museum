@@ -11,7 +11,7 @@ import { ParallaxCustomLayer } from '@/components/custom_layer/custom_layer'
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const pages = layersData
-const length = 10
+const length = 9
 
 export const BlockParallax = () => {
 	const isMobile = false
